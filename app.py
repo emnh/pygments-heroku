@@ -26,8 +26,10 @@ def index():
 def pygments():
   lang = request.form["lang"]
   code = request.form["code"]
-  return pygmentize(lang, code)
-
+  pyg = pygmentize(lang, code)
+  resp = make_response(pyg, 200)
+  resp.headers["Access-Control-Allow-Origin"] = "*"
+  return pyg
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
