@@ -24,7 +24,7 @@ def index():
 
 
 @app.route('/pyg', methods=['OPTIONS','POST'])
-@crossdomain(origin="*")
+@crossdomain(origin=["*", "http://run.jsbin.com"])
 def pygments():
   lang = request.form["lang"]
   code = request.form["code"]
