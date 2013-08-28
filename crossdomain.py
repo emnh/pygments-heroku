@@ -1,3 +1,5 @@
+# from http://flask.pocoo.org/snippets/56, public domain
+
 from datetime import timedelta
 from flask import make_response, request, current_app
 from functools import update_wrapper
