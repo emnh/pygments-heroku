@@ -23,7 +23,7 @@ def index():
   return html
 
 
-@app.route('/', methods=['POST'])
+@app.route('/pyg', methods=['OPTIONS','POST'])
 @crossdomain(origin="*")
 def pygments():
   lang = request.form["lang"]
