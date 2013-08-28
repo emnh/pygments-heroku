@@ -1,5 +1,5 @@
 import os
-from flask import Flask, request, logging
+from flask import Flask, request, logging, make_response
 
 from pygments import highlight
 from pygments.lexers import get_lexer_by_name
@@ -29,9 +29,10 @@ def pygments():
   pyg = pygmentize(lang, code)
   resp = make_response(pyg, 200)
   resp.headers["Access-Control-Allow-Origin"] = "*"
-  return pyg
+  return resp
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
     # For debugging & automatic relaoding of flask apps, set debug=True
+    # app.debug = True
     app.run(host='0.0.0.0', port=port)
