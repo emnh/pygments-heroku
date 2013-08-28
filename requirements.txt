@@ -1,4 +1,4 @@
 Pygments==1.6
 Flask==0.10
 ElementTree==1.2.6-20050316
-Markdown==2.0.3
+Markdown==2.3.1
