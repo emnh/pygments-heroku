@@ -16,7 +16,8 @@ def pygmentize(lang, code):
   return highlight(code, lexer, formatter)
 
 
-@app.route('/', methods=['GET'])
+@app.route('/', methods=['OPTIONS', 'GET'])
+@crossdomain(origin=["*"])
 def index():
   src = open('README.md', 'r').read()
   html = markdown.markdown(src)
@@ -24,7 +25,7 @@ def index():
 
 
 @app.route('/pyg', methods=['OPTIONS','POST'])
-@crossdomain(origin=["*", "http://run.jsbin.com"])
+@crossdomain(origin=["*"])
 def pygments():
   lang = request.form["lang"]
   code = request.form["code"]
