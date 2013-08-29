@@ -34,5 +34,5 @@ def pygments():
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
     # For debugging & automatic relaoding of flask apps, set debug=True
-    #app.debug = True
+    app.debug = True
     app.run(host='0.0.0.0', port=port)
