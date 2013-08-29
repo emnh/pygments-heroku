@@ -24,7 +24,7 @@ def index():
   return html
 
 
-@app.route('/pyg', methods=['OPTIONS','POST'])
+@app.route('/pyg', methods=['OPTIONS','GET', 'POST'])
 @crossdomain(origin=["*"])
 def pygments():
   lang = request.form["lang"]
@@ -34,5 +34,5 @@ def pygments():
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
     # For debugging & automatic relaoding of flask apps, set debug=True
-    app.debug = True
+    #app.debug = True
     app.run(host='0.0.0.0', port=port)
