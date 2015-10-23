@@ -3,7 +3,7 @@
 [http://pygmentize.herokuapp.com](http://pygmentize.herokuapp.com) is an HTTP API for the syntax highligher [Pygments](http://pygments.org/).
 
 * Runs on [Heroku](http://heroku.com) (Cedar)
-* Uses **pygments** version **1.4**
+* Uses **pygments** version **2.0.2**
 * Uses PIP to manage dependencies (as per the [Heroku Python Tutorial](http://devcenter.heroku.com/articles/python))
 
 ## API
